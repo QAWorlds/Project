@@ -2,6 +2,7 @@ package testcases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
 
 public class Testcase {
 
@@ -21,6 +22,10 @@ public class Testcase {
 		
 		
 		driver.manage().window().maximize();
+		
+		
+		Select object = new Select(driver.findElement(null));
+		object.selectByVisibleText("visa");  
 
 	}
 
