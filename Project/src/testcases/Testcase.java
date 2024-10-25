@@ -26,7 +26,7 @@ System.out.print(false);//
 
 //////////////////////////////////////////
 
-
+driver.switchTo().alert().dismiss();
 
 
 
