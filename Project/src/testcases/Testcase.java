@@ -25,8 +25,8 @@ public class Testcase {
 		driver.manage().window().maximize();
 		
 		
-		Select object = new Select(driver.findElement(null));
-		object.selectByVisibleText("visa");  
+		 Select object = new Select(driver.findElement(null));
+		 object.selectByVisibleText("visa");  
 		
 		
 		driver.findElement(By.tagName("a"));
