@@ -21,11 +21,11 @@ public class Testcase {
 		driver.get("http://www.google.com");
 		
 		
-		Select object = new Select(driver.findElement(null));
-		object.selectByVisibleText("visa");  
+	Select object = new Select(driver.findElement(null));
+	object.selectByVisibleText("visa");  
 		
 		
-		driver.findElement(By.tagName("a"));
+	driver.findElement(By.tagName("a"));
 
 ///////////////////////////////////////////////////////////////
 	}
