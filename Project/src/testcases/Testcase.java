@@ -18,6 +18,9 @@ public class Testcase {
 		WebDriver driver = new ChromeDriver(option);
 		
 		driver.get("http://www.google.com");
+		
+		
+		driver.manage().window().maximize();
 
 	}
 
