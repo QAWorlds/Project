@@ -27,17 +27,23 @@ public class weblinks {
 		
 	driver.get("http://www.google.com");
 		driver.manage().window().maximize();
-		
+		/*
 		// Finding all the available links on webpage
 		List<WebElement> links = driver.findElements(By.xpath("//a"));
-
-
 		// Iterating each link and checking the response status
 		for (WebElement link : links) {
 		String url = link.getAttribute("href");
+		System.out.println(url);*/
+		
+		
+		List<WebElement> web = driver.findElements(By.xpath("a"));
+		for(WebElement links : web) {
+		String url = links.getAttribute("href");
 		System.out.println(url);
+		}
+		
 		}
 		
 	}
 
-}
+

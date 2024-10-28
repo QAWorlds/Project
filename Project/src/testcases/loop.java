@@ -26,17 +26,20 @@ public class loop {
 		driver.manage().window().maximize();
 		
 		Thread.sleep(2000);
-		
-		List <WebElement> listofItems = driver.findElements(By.xpath("//a"));
+		driver.findElement(By.xpath("//a[text()='Widgets']")).click();
+		List <WebElement> listofItems = driver.findElements(By.xpath("/html/body/header/nav/div/div[2]/ul/li[5]/ul"));
 		  System.out.println(listofItems);
 		  
 		  
 		for (int i=1; i<=listofItems.size(); i++)
 		{
+			
+			//driver.findElement(By.xpath("//a[text()='Widgets']")).click();
+			
 		   listofItems.get(i).click();
 		  // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		   System.out.println(i);
-		   System.out.println("pass");
+		  
 		   
 		   Thread.sleep(5000);
 		   
