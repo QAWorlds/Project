@@ -13,7 +13,7 @@ public class links {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		  System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		 // System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
           ChromeOptions options = new ChromeOptions();
 
 

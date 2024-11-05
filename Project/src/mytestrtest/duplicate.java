@@ -60,22 +60,14 @@ public class duplicate {
 	       
 	       
 	       
+	     List<String>  from = Arrays.asList("ara", "ara", "vind");
+	       
+	       
+	     Set<String> to =new HashSet(from);
 	     
-	       List<Integer> duplicate = Arrays.asList(1,2,2,3);
- 	       
-	       
-	       Set<Integer> orginal = new HashSet<Integer>(duplicate);	       
-	       
-	       
-	       List<Integer> eorginal = new ArrayList<Integer> (orginal);
-	       
-	       
-	       System.out.print(eorginal);
-	       
-	       
-	       
-	       
-	       
+	     List<String> their = new ArrayList(to);
+	     
+	     System.out.println(their);
 	       
 	       
 	       

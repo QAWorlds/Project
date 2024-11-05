@@ -1,5 +1,8 @@
 package testcases;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -10,7 +13,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 
 public class weblinks {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws AWTException {
 		// TODO Auto-generated method stub
 
 		
@@ -25,7 +28,7 @@ public class weblinks {
 		
 		WebDriver driver = new EdgeDriver();
 		
-	driver.get("http://www.google.com");
+	driver.get("https://demo.automationtesting.in/Static.html");
 		driver.manage().window().maximize();
 		/*
 		// Finding all the available links on webpage
@@ -36,12 +39,13 @@ public class weblinks {
 		System.out.println(url);*/
 		
 		
-		List<WebElement> web = driver.findElements(By.xpath("a"));
+		List<WebElement> web = driver.findElements(By.tagName("a"));
 		for(WebElement links : web) {
 		String url = links.getAttribute("href");
 		System.out.println(url);
 		}
-		
+		Robot robo = new Robot();
+		robo.keyPress(KeyEvent.VK_PAGE_DOWN);
 		}
 		
 	}

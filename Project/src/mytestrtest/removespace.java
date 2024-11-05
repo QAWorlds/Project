@@ -7,9 +7,11 @@ public class removespace {
 
 		String name = ("aravind  ,     raj");
 		
-		String work = name .replaceAll("\\s+", "");
+		//String work = name .replaceAll("\\s+", "");
 		
-		System.out.print(work);
+		String work = name .toUpperCase();
+		
+		System.out.println(work);
 		
 	}
 
