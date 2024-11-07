@@ -6,11 +6,13 @@ public class revers {
 		// TODO Auto-generated method stub
 
 		String originalstring = "Aravind";
+		
+		String low = originalstring.replace("Aravind", "dev");
+		System.out.println("original   =    "+low);
 	       
 	       StringBuilder reverseString = new StringBuilder (originalstring);
 	       
 	       reverseString.reverse();
-	       
 	       System.out.println("original   =    "+originalstring);
 	       
 	       System.out.println("reversoriginal    =   "+reverseString.toString());

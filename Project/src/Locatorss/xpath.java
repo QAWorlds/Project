@@ -16,7 +16,7 @@ ChromeOptions option = new ChromeOptions();
 		
 		option.addArguments("--remote-allow-origins*");
 		
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(option);
 		
 	driver.get("https://www.flipkart.com");
 	driver.manage().window().maximize();
