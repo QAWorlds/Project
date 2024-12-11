@@ -15,13 +15,15 @@ public class screenshot {
 WebDriver driver;
 	public static void main(String[] args) throws InterruptedException, AWTException, IOException {
 		// TODO Auto-generated method stub
+		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
+
 ChromeOptions option = new ChromeOptions();
 		
-		option.addArguments("--remote-allow-origins*");
+		option.addArguments("--remote-allow-origins=*");
 		
 		WebDriver driver = new ChromeDriver(option);
 		
-	driver.get("https://www.flipkart.com");
+	driver.get("https://www.oxo.com");
 	driver.manage().window().maximize();
 	
 	
@@ -31,7 +33,7 @@ ChromeOptions option = new ChromeOptions();
 	// Now you can do whatever you need to do with it, for example copy somewhere
 	
 	
-	FileUtils.copyFile(snapshot, new File("C:\\Users\\sai\\git\\aravind\\Project\\Project\\resorce\\Aravind.png"));
+	FileUtils.copyFile(snapshot, new File("C:\\Users\\Aravind\\git\\Project\\Project\\Aravind.png"));
 
 	driver.switchTo().alert().accept();
 	

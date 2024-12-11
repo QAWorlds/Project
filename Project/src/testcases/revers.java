@@ -7,9 +7,24 @@ public class revers {
 
 		String originalstring = "Aravind";
 		
+		
+		
+		
+		//for replace with another text
+		
+		
+		
 		String low = originalstring.replace("Aravind", "dev");
 		System.out.println("original   =    "+low);
 	       
+		
+		
+		
+	//for reverse the string	
+		
+		
+		
+		
 	       StringBuilder reverseString = new StringBuilder (originalstring);
 	       
 	       reverseString.reverse();

@@ -10,14 +10,15 @@ public class choose_file {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
+		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 
 ChromeOptions option = new ChromeOptions();
 		
-		option.addArguments("--remote-allow-origins*");
+		option.addArguments("--remote-allow-origins=*");
 		
 		WebDriver driver = new ChromeDriver();
 		
-	driver.get("https://demo.automationtesting.in/Static.html");
+	driver.get("https://demo.automationtesting.in/Register.html");
 	driver.manage().window().maximize();
 	
 	

@@ -1,7 +1,7 @@
 package mytestrtest;
 
 import java.util.List;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +13,7 @@ public class links {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		 // System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
           ChromeOptions options = new ChromeOptions();
 
 
@@ -28,7 +28,7 @@ public class links {
 List<WebElement> links = driver.findElements(By.tagName("a"));
 		
 		for(WebElement link: links) {
-			System.out.println(link.getAttribute("href"));
+			System.out.println(link.getAttribute("hrf"));
 	}
 
 }}

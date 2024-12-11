@@ -5,9 +5,7 @@
     <classes>
       <class name="testcases.drag_drop">
         <methods>
-          <include name="test"/>
           <include name="main"/>
-          <include name="close"/>
         </methods>
       </class> <!-- testcases.drag_drop -->
     </classes>

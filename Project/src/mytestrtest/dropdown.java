@@ -18,9 +18,11 @@ import org.testng.annotations.Test;
 
 public class dropdown {
 	
-	
-	@BeforeTest
+@Test
 	public void setup() throws InterruptedException {
+		
+		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
+
 		 ChromeOptions options = new ChromeOptions();
          options.addArguments("--remote-allow-origins=*");
             WebDriver driver = new ChromeDriver();
@@ -28,7 +30,7 @@ public class dropdown {
        driver.manage().window().maximize();
 Thread.sleep(5000);
 	}
-@Test(priority = 1)
+
 	public void dropdown() throws InterruptedException {
 		// TODO Auto-generated method stub
 	WebDriver driver = new ChromeDriver();
@@ -38,12 +40,8 @@ Thread.sleep(5000);
 	driver.findElement(By.id("firstpssword")).sendKeys("aravind");
 }
 	
-	@AfterTest
-	public void close() {
-		 WebDriver driver = new ChromeDriver();
-		driver.quit();
 	}
-}
+
 
 
 

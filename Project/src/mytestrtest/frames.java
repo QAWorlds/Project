@@ -10,11 +10,10 @@ public class frames {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
-	    //  System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 	              ChromeOptions options = new ChromeOptions();
 
-
-	                   options.addArguments("--remote-allow-origins=*");
+                       options.addArguments("--remote-allow-origins=*");
 	                   WebDriver driver = new ChromeDriver(options);
 	      
 	               driver.get("https://demo.automationtesting.in/Frames.html");

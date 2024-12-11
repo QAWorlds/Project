@@ -56,22 +56,11 @@ public class duplicate {
 	   //    System.out.print("original"+reverse.toString()); */
 		  
 		  
-	       
-	       
-	       
-	       
-	     List<String>  from = Arrays.asList("ara", "ara", "vind");
-	       
-	       
-	     Set<String> to =new HashSet(from);
-	     
-	     List<String> their = new ArrayList(to);
-	     
-	     System.out.println(their);
-	       
-	       
-	       
-	       
+	   List<Integer> to = Arrays.asList(1,1,2);
+	   Set<Integer> from = new HashSet(to);
+	   List<Integer> their = new ArrayList (from);
+	   
+	   System.out.println(their);
 	       
 	       
 		  
