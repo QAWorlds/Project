@@ -35,7 +35,7 @@ ChromeOptions option = new ChromeOptions();
 	driver.get("https://demo.automationtesting.in/Static.html");
 	
 	 
-	    
+	      
 	
 	
 	

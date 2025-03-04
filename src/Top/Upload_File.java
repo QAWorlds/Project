@@ -27,4 +27,4 @@ ChromeOptions option = new ChromeOptions();
 	WebElement fileInput = driver.findElement(By.name("uploadfile"));
 	fileInput.sendKeys("C:/path/to/file.jpg");
 }
-}
+}  
