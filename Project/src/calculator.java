@@ -23,7 +23,7 @@ public class calculator {
             System.out.println("Error Message: " + e.getMessage());
             e.printStackTrace();
         }
-    }
+    }//
 
     public static void openCalculator() throws Exception {
         try {
