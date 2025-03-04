@@ -18,7 +18,7 @@ public class linkedtext {
 driver.get("https://www.globalsqa.com/cheatsheets/");
 driver.manage().window().maximize();
 	 Thread.sleep(5000);
-
+Thread.sleep(5000);
 	driver.findElement(By.partialLinkText("heat Sheet")).click();
 	Thread.sleep(5000);
 	driver.findElement(By.linkText("Python Beginner Cheat Sheet")).click();
