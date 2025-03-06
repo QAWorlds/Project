@@ -35,11 +35,11 @@ ChromeOptions option = new ChromeOptions();
 	
 	FileUtils.copyFile(snapshot, new File("C:\\Users\\Aravind\\git\\Project\\Project\\Aravind.png"));
 
-	driver.switchTo().alert().accept();
+	//driver.switchTo().alert().accept();
 	
 	 
 	
-	  
+	  //Bug related questions fo qa in interview?
 	
 	
 	

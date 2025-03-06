@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.drag_drop">
+      <class name="Top.Drag_and_Drop">
         <methods>
           <include name="main"/>
         </methods>
-      </class> <!-- testcases.drag_drop -->
+      </class> <!-- Top.Drag_and_Drop -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

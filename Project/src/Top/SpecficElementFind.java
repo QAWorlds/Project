@@ -1,14 +1,13 @@
 package Top;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.util.List;
-
-public class Dynamic_Dropdowns {
+public class SpecficElementFind {
     public static void main(String[] args) throws InterruptedException {
     	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 
@@ -19,24 +18,17 @@ public class Dynamic_Dropdowns {
        driver.manage().window().maximize();
 Thread.sleep(5000);
 	
-        driver.findElement(By.id("Skills")).click();
 
-        // Wait for options to appear (Explicit Wait can be used)
-        Thread.sleep(2000); // Replace with WebDriverWait for better stability
 
-        // Get all options
-        List<WebElement> optionss = driver.findElements(By.xpath("//Select[@id='Skills']/option"));
+        WebElement targetElement = driver.findElement(By.cssSelector("button#Button1")); // Replace with actual XPath
 
-        // Loop through options to select "Option 3"
-        for (WebElement option : optionss) {
-            if (option.getText().equals("C")) {
-                option.click();
-                //break;
-            }
-        }
+        // Create JavascriptExecutor instance
+        JavascriptExecutor js = (JavascriptExecutor) driver;
 
-       // driver.quit();  
+        // Scroll to the element
+        js.executeScript("arguments[0].scrollIntoView(true);", targetElement);
+
+        // Close the browser
+      //  driver.quit();
     }
 }
-  
-

@@ -56,9 +56,9 @@ public class duplicate {
 	   //    System.out.print("original"+reverse.toString()); */
 		  
 		  
-	   List<Integer> to = Arrays.asList(1,1,2);
-	   Set<Integer> from = new HashSet(to);
-	   List<Integer> their = new ArrayList (from);
+	   List<String> to = Arrays.asList("aravind" ,"sri", "aravind");
+	   Set<String> from = new HashSet(to);
+	   List<String> their = new ArrayList (from);
 	   
 	   System.out.println(their);
 	       
