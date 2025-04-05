@@ -44,7 +44,7 @@ ChromeOptions option = new ChromeOptions();
 	driver.get("https://demo.automationtesting.in/Static.html");
 	
 	 
-	      driver.manage().window().maximize();
+	      
 	  
 	
 	
@@ -57,14 +57,14 @@ ChromeOptions option = new ChromeOptions();
 	
 	WebElement from = driver.findElement(By.xpath("//img[@id='angular']"));
 	
-	WebElement to = driver.findElement(By.xpath("//div[@class='dragged']")); 
+	WebElement to = driver.findElement(By.xpath("//div[@class='draggedd']")); 
 	//Perform drag and drop
-	Actions action = new Actions(driver);
-	action.dragAndDrop(from, to).perform();
+	Actions builder = new Actions(driver);
+	         builder.dragAndDrop(from, to).perform();
 		
 		
 		  
-	     driver.quit();    
+	         
 	           
 	         
 	         

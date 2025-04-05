@@ -5,13 +5,13 @@ public class removespace {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String name = ("arAV  ind");
+		String name = ("arAVind  ,     raj");
 		
 		String tm = name .replaceAll("\\s+", "");
 		
-		String work = tm .toUpperCase();
+		String work = tm .toLowerCase();
 		
-		System.out.println(tm);
+		System.out.println(work);
 		
 		
 	
