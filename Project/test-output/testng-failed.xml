@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNG.ScreenshotTest">
+      <class name="Top.Drag_and_Drop">
         <methods>
-          <include name="setUp"/>
-          <include name="testFail"/>
-          <include name="tearDown"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- TestNG.ScreenshotTest -->
+      </class> <!-- Top.Drag_and_Drop -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

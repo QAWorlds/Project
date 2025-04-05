@@ -10,7 +10,7 @@ public class MultipleBrowser {
     public static WebDriver driver;
 
     public static void main(String[] args) {
-        String browser = "firefox"; // Change this value to "firefox" or "edge"
+        String browser = "edge"; // Change this value to "firefox" or "edge"
 
         // Initialize WebDriver based on browser choice
         switch (browser.toLowerCase()) {
