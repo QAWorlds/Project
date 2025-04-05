@@ -13,7 +13,7 @@ public class ReverseString {
 	       
 	       System.out.println("original = "+originalstring);
 	       
-	       System.out.println("original = "+reverseString.toString());
+	       System.out.println("original = "+reverseString);
 
 }
 }
