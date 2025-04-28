@@ -1,4 +1,4 @@
-package mytestrtest;
+package Top;
 
 public class removespace {
 

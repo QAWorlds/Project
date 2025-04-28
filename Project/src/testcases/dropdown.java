@@ -26,15 +26,11 @@ public class dropdown {
 public  void googlr()  throws InterruptedException {
 		// TODO Auto-generated method stub
 
-	
-		ChromeOptions option = new ChromeOptions();
-		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
-	
-			option.addArguments("--remote-allow-origins*");
-			
-
-			
-			WebDriver driver = new ChromeDriver();
+ChromeOptions option = new ChromeOptions();
+		
+		option.addArguments("--remote-allow-origins*");
+		
+		WebDriver driver = new ChromeDriver();
 		//	WebDriver driver = new ChromeDriver();
 			
 		    driver.get("https://demo.automationtesting.in/Register.html");

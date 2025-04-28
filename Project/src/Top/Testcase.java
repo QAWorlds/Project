@@ -1,40 +1,49 @@
 package Top;
+import java.awt.AWTException;
 import java.util.LinkedHashSet;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 public class Testcase {
     
-	public static String removeduplicate (String stg) {
+	public static void main(String[] args) throws AWTException {
+		// TODO Auto-generated method stub
+
 		
-		LinkedHashSet<Character> Set = new LinkedHashSet<>();
 		
 		
-		StringBuilder result = new StringBuilder();
+		//System.setProperty("chromedivber.chrome.driver", "");
 		
-		for (char ch: stg.toCharArray()) {
-			if( Set.add(ch)) {
-				result.append(ch);
-			}
+		
+		EdgeOptions option = new EdgeOptions();
+		
+		option.addArguments("--remote-allow-origins*");
+		
+		WebDriver driver = new EdgeDriver();
+		
+	driver.get("https://demo.automationtesting.in/Static.html");
+		driver.manage().window().maximize();
+		
+		List<WebElement> list = driver.findElements(By.tagName("a"));
+		
+		for (WebElement lists: list) {
+			
+			
+			
+			String url =lists.getAttribute("href");
+			System.out.println(url);
 		}
 		
 		
 		
 		
-		
-		
-		
-		return result.toString();
+	}
 	
-	
-	
-	
-	
-	
-	
-}
 
-    public static void main(String[] args) {
-        String name = "AABBBCCDEE";
-        System.out.println("Original: " + name);
-        System.out.println("Without Duplicates: " + removeduplicate(name));
-    }
 }
+	
