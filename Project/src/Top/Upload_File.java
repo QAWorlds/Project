@@ -16,7 +16,7 @@ public class Upload_File {
         driver.manage().window().maximize();
 
         // Use smart healing!
-        ElementHelper.findElement(driver, By.xpath("//button[@type='submit']"), "click the Submit button").click();
+      driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         Thread.sleep(3000);
         driver.quit();
