@@ -10,10 +10,11 @@ public class choose_file {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
+		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 
 ChromeOptions option = new ChromeOptions();
 		
-		option.addArguments("--remote-allow-origins*");
+		option.addArguments("--remote-allow-origins=*");
 		
 		WebDriver driver = new ChromeDriver();
 		
@@ -26,4 +27,6 @@ ChromeOptions option = new ChromeOptions();
 	WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
 	fileInput.sendKeys("C:\\aravind/Screenshot_1.png");
 }
-}
+}  
+
+
