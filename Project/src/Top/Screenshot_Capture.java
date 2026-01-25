@@ -37,7 +37,7 @@ ChromeOptions option = new ChromeOptions();
 
 	//driver.switchTo().alert().accept();
 	
-	 
+
 	
 	  //Bug related questions fo qa in interview?
 	

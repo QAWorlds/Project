@@ -1,52 +1,62 @@
 package Top;
 
+import java.time.Duration;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 
 public class WindowHandling {
-	
-	public static void main(String[] args) throws InterruptedException {
-    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 
-   	 ChromeOptions option = new ChromeOptions();
-   	 		
-   	 		option.addArguments("--remote-allow-origins*");
-   	 		
-   	 		WebDriver driver = new ChromeDriver();
-   	 		
-   	 	driver.get("https://demo.automationtesting.in/Register.html");
-   	 	 driver.manage().window().maximize();
-   	 	Thread.sleep(5000);
-   	 	
-   	 	
-   	 String mainWindow = driver.getWindowHandle();
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
 
-     // Click a link that opens a new window
-     driver.findElement(By.xpath("//a[text()='Home']"));
+        driver.get("https://demoqa.com/browser-windows");
 
-     // Get all window handles
-     Set<String> allWindows = driver.getWindowHandles();
+        // Get the main window handle
+        String mainWindow = driver.getWindowHandle();
+        
+        Thread.sleep(3000);
+        Actions actions = new Actions(driver);
+        
+        
+        // Click the button to open a new tab
+      WebElement tab =   driver.findElement(By.id("windowButton"));
+      
+      actions.scrollToElement(tab).perform();
+      //driver.navigate().refresh();
 
-     // Iterate and switch to new window
-     for (String window : allWindows) {
-         if (!window.equals(mainWindow)) {
-             driver.switchTo().window(window);
-             System.out.println("Switched to new window: " + driver.getTitle());
-             break;
-         }
-     }
+      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tab);
+     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+      tab.click();
+      
+      
+      
+      
+        Thread.sleep(3000); // Give it time to open the tab
 
-     // Perform actions in the new window
-     driver.findElement(By.cssSelector("input#email")).sendKeys("Selenium");
+        Set<String> allWindows = driver.getWindowHandles();
 
-     // Switch back to the main window
-     driver.switchTo().window(mainWindow);
-     System.out.println("Switched back to main window: " + driver.getTitle());
+        for (String window : allWindows) {
+            if (!window.equals(mainWindow)) {
+                driver.switchTo().window(window);
+                System.out.println("Switched to new window/tab: " + driver.getTitle());
+                System.out.println("Text from new tab: " + driver.findElement(By.id("sampleHeading")).getText());
+                Thread.sleep(5000);
+               
+                
+                driver.close();
+            }
+        }
 
-    // driver.quit();
- }
+        driver.switchTo().window(mainWindow);
+        System.out.println("Back to main tab: " + driver.getTitle());
+        Thread.sleep(5000);
+       // driver.quit();
+    }
 }

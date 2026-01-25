@@ -20,7 +20,7 @@ public class duplicate {
 	       
 	       System.out.print("original"+reverseString.toString());
 	       
-	     //////////////////// duplicates ////////////////
+	     //////////////////// duplicates ////////////////*/
 		        List<Integer> listWithDuplicates = Arrays.asList(1, 2, 2, 3, 4, 4, 5, 6, 6);
 
 		        // Use a HashSet to remove duplicates
@@ -44,7 +44,7 @@ public class duplicate {
 		        System.out.println("Original Names List: " + namesWithDuplicates);
 		        System.out.println("Names Without Duplicates: " + namesListWithoutDuplicates);
 		  
-		  */
+		 
 		  
 		 /* String original = ("aravind");
 		  StringBuilder reverse = new StringBuilder (original);

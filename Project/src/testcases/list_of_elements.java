@@ -41,10 +41,8 @@ ChromeOptions option = new ChromeOptions();
 		    System.out.println(dd.size());
 
 		    // Loop to print one by one
-		    for (int j = 0; j < dd.size(); j++) {
-		        System.out.println(dd.get(j).getText());
-
+		    
 		    }
 	}
 
-}
+

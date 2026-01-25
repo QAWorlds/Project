@@ -21,13 +21,7 @@
         </dependency>
 
         <!-- Healenium Proxy Dependency -->
-       <dependency>
-        <groupId>com.epam.healenium</groupId>
-        <artifactId>healenium-proxy</artifactId>
-        <version>2.1.5</version>
-        <scope>system</scope>
-        <systemPath>C:\Users\Aravind\git\Project\Project/libs/hlm-proxy-2.1.5.jar</systemPath>
-    </dependency>
+      
 <dependency>
         <groupId>org.apache.poi</groupId>
         <artifactId>poi-ooxml</artifactId>
@@ -49,11 +43,12 @@
         </dependency>
 
         <!-- WebDriver Manager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.6.0</version> <!-- Or latest stable version -->
-        </dependency>
+      <dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.9.2</version>
+</dependency>
+
 
         <!-- SLF4J for Logging -->
         <dependency>

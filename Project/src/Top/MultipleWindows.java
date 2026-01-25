@@ -15,7 +15,7 @@ public class MultipleWindows {
 		 ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
            WebDriver driver = new ChromeDriver();
-        driver.get("https://demo.automationtesting.in/Register.html");
+        driver.get("https://testautomationpractice.blogspot.com/");
       driver.manage().window().maximize();
 Thread.sleep(5000);
 		

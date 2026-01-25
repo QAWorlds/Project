@@ -48,7 +48,9 @@ ChromeOptions option = new ChromeOptions();
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("elementId")));
 
+	File sanp = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	
+	FileUtils.copyFile(sanp, new File(""));
 	
 	
 	}

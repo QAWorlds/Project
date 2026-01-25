@@ -22,7 +22,7 @@ public class drag_drop {
 
 @Test
 
-	public  void main() throws InterruptedException {
+	public  void dargthelement() throws InterruptedException {
 		// TODO Auto-generated method stub
 		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 

@@ -1,28 +1,83 @@
 package Top;
 
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 public class ExcelUtils {
-    public static String getCellData(String filePath, String sheetName, int row, int col) throws IOException {
-        FileInputStream fis = new FileInputStream(new File(filePath));
-        Workbook workbook = WorkbookFactory.create(fis);
-        Sheet sheet = workbook.getSheet(sheetName);
 
-        if (sheet == null) {
-            throw new IllegalArgumentException("Sheet '" + sheetName + "' not found.");
-        }
+    public static String getCellValue(String filePath, String sheetName, int row, int col) throws IOException {
+       
+    	
+    	
+    	
+    	FileInputStream fis = new FileInputStream(filePath);
+    	
+    	Workbook wb = new XSSFWorkbook(fis);
+    	
+    	Sheet sheet = wb.getSheet(sheetName);
+    	
+    	Cell cell = sheet.getRow(row).getCell(col);
+    	
+    	
+    	String value = cell.toString();
+    	wb.close();
+    	
+		return value;
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+           
+    	/*FileInputStream fis = new FileInputStream(filePath);
+            Workbook workbook = new XSSFWorkbook(fis);
+            Sheet sheet = workbook.getSheet(sheetName);
+            Cell cell = sheet.getRow(row).getCell(col);
 
-        Row dataRow = sheet.getRow(row);
-        if (dataRow == null) return ""; // Handle missing row
+            String value = cell.toString(); // Automatically handles most types as string
+            workbook.close();
+            return value;
 
-        Cell cell = dataRow.getCell(col);
-        if (cell == null) return ""; // Handle missing cell
-
-        fis.close();
-        return cell.toString(); // Returns value as String
-    }
+        */
+    
 }
+    
+ 
+
+
+
+}
+ 

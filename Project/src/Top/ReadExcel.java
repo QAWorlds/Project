@@ -7,29 +7,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import yourpackage.ExcelUtils;  // Replace 'yourpackage' with the actual package name
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import testngtest.exceldata;
+
 
 public class ReadExcel {
     public static void main(String[] args) throws Exception {
-    	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
+    	// System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravind\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 
-    	 ChromeOptions option = new ChromeOptions();
-    	 		
-    	 		option.addArguments("--remote-allow-origins*");
-    	 		
+    	
     	 		WebDriver driver = new ChromeDriver();
     	 		
     	 	driver.get("https://demo.automationtesting.in/Register.html");
     	 	 driver.manage().window().maximize();
     	 	Thread.sleep(5000);
     	 	
-    	 	
-    	 	
-
+ 
         // Read test data from Excel
-        String file = "C:\\Users\\Aravind\\git\\aravind\\Project\\Project\\LoginData.xlsx";
-
-        String username = ExcelUtils.getCellData(file, "Sheet1", 1, 0);
-        String password = ExcelUtils.getCellData(file, "Sheet1", 1, 1);
+        String file = "C:\\Selenium\\Testdata.xlsx";
+        String usernames = exceldata.getcelldata(file, "sheet1", 0, 0);
+        String username = ExcelUtils.getCellValue(file, "Sheet1", 0, 1);
+        String password = ExcelUtils.getCellValue(file, "Sheet1", 1, 0);
 
         // Perform login using data from Excel
         WebElement userField = driver.findElement(By.xpath("//input[@type='email']"));

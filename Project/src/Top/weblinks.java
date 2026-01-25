@@ -45,7 +45,7 @@ public class weblinks {
 		System.out.println(url);
 		}
 		Robot robo = new Robot();
-		robo.keyPress(KeyEvent.VK_PAGE_DOWN);
+		robo.keyPress(KeyEvent.BUTTON3_DOWN_MASK);
 		}
 		
 	}

@@ -27,6 +27,51 @@ ChromeOptions option = new ChromeOptions();
 		                   
 ///////// normal xpath /////////////////////////////
 		
+		
+		/*
+		 *  2. #ShiftLeft and #ShiftRight Testing
+🔹 #ShiftLeft Testing:
+Involves testing early in the development lifecycle, such as during:
+
+Requirements analysis
+
+Design
+
+Unit and integration stages
+
+Goal: Catch defects early when they are cheaper to fix.
+
+Example: QA reviews user stories, writes test cases before development begins, or automates tests in CI/CD pipeline.
+
+🔹 #ShiftRight Testing:
+Focuses on post-deployment validation in production environments.
+
+Includes:
+
+Monitoring user behavior
+
+A/B testing
+
+Chaos testing
+
+Real-time logs and alerting
+
+Goal: Detect issues that only appear in production and improve user experience using real-world feedback.
+
+✅ Why Both Matter:
+Using both approaches helps deliver high-quality software faster, with fewer bugs and better user satisfaction.
+
+Shift Left = Prevent defects early
+
+Shift Right = Detect unknowns in real-world use
+
+
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		
 /*
 		Advanced Techniques in Relative XPath:
 			Using Attributes: Select elements based on specific attributes.
