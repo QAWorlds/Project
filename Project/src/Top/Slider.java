@@ -27,5 +27,5 @@ public class Slider {
 	    Actions action = new Actions(driver);
 
 	    // drag the slider 50 pixels to the right
-	    action.dragAndDropBy(slider, 50, 0).perform();
+	    action.dragAndDropBy(slider, 0, 0).perform();
 	}}

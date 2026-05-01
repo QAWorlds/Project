@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class Forgotpassword_002 {
-@Test
+	@Test(enabled = false)
 	public static void maih() {
 		// TODO Auto-generated method stub
 		

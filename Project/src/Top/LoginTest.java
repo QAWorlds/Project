@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 public class LoginTest {
 
     @DataProvider(name = "loginData")
-    public Object[][] loginDataProvider() {
+    public Object[][] login() {
         return new Object[][] {
-            { "user1@example.com", "1234567890" },
+            { "user1@example.com", "1234567890" }
             
         };
     }

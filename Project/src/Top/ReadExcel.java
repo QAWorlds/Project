@@ -24,7 +24,7 @@ public class ReadExcel {
  
         // Read test data from Excel
         String file = "C:\\Selenium\\Testdata.xlsx";
-        String usernames = exceldata.getcelldata(file, "sheet1", 0, 0);
+        String usernames = ExcelUtils.getCellValue(file, "sheet1", 0, 0);
         String username = ExcelUtils.getCellValue(file, "Sheet1", 0, 1);
         String password = ExcelUtils.getCellValue(file, "Sheet1", 1, 0);
 

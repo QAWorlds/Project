@@ -35,6 +35,6 @@ public class Accertions {
     String  url =     driver.getTitle();
         Assert.assertEquals( url, "Alerts");
         
-        Assert.assertEquals(actualText, expectedText, "Page title mismatch!");
+        Assert.assertEquals(actualText, "Automation Demo Site", "Page title mismatch!");
     }
 }

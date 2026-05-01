@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -57,7 +58,7 @@ Syntax:*/
 	        
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginBtn")));
-
+wait.until(ExpectedConditions.elementToBeClickable(By.id("close-popup")));
 	  //Fluent Wait
 /*What it is:
 
@@ -81,7 +82,9 @@ Wait<WebDriver> waits = new FluentWait<>(driver)
 .pollingEvery(Duration.ofSeconds(2))
 .ignoring(NoSuchElementException.class);
 
-wait.until(ExpectedConditions.elementToBeClickable(By.id("close-popup")));
+WebElement login = driver.findElement(By.id(null));
+
+
 /*
 “Implicit wait is set once globally for all elements. Explicit wait is used only for specific elements with conditions like visibility or clickability. 
 Fluent wait is an advanced explicit wait where we can set custom polling time and ignore exceptions, useful for unpredictable elements or sudden pop-ups.”

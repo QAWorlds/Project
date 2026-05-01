@@ -26,36 +26,7 @@ public class ExcelUtils {
     	wb.close();
     	
 		return value;
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
+	
     	
     	
     	
